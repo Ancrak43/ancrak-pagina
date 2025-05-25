@@ -41,12 +41,10 @@
 
   <script>
     function cambiarImagen() {
-      const timestamp = new Date().getTime();
-      const url = https://picsum.photos/600/400?random=${timestamp};
+      const url = https://source.unsplash.com/random/600x400?sig=${Math.random()};
       document.getElementById('randomImage').src = url;
     }
 
-    // Mostrar una al cargar
     cambiarImagen();
   </script>
 </body>

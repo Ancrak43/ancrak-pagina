@@ -7,45 +7,6 @@
   <style>
     body {
       display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-      background-color: #f0f0f0;
-    }
-    img {
-      max-width: 90%;
-      max-height: 90%;
-      border: 5px solid #333;
-      border-radius: 10px;
-    }
-  </style>
-</head>
-<body>
-  <img id="randomImage" src="" alt="Imagen aleatoria" />
-  <script>
-    const images = [
-      'https://picsum.photos/600/400?random=1',
-      'https://picsum.photos/600/400?random=2',
-      'https://picsum.photos/600/400?random=3',
-      'https://picsum.photos/600/400?random=4',
-      'https://picsum.photos/600/400?random=5'
-    ];
-
-    const randomIndex = Math.floor(Math.random() * images.length);
-    document.getElementById('randomImage').src = images[randomIndex];
-  </script>
-</body>
-</html>
-[2:02 p.m., 25/5/2025] Antonio: <!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Imagen Aleatoria</title>
-  <style>
-    body {
-      display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
@@ -79,19 +40,10 @@
   <button onclick="cambiarImagen()">Otra imagen</button>
 
   <script>
-    const images = [
-      'https://picsum.photos/600/400?random=1',
-      'https://picsum.photos/600/400?random=2',
-      'https://picsum.photos/600/400?random=3',
-      'https://picsum.photos/600/400?random=4',
-      'https://picsum.photos/600/400?random=5',
-      'https://picsum.photos/600/400?random=6',
-      'https://picsum.photos/600/400?random=7'
-    ];
-
     function cambiarImagen() {
-      const randomIndex = Math.floor(Math.random() * images.length);
-      document.getElementById('randomImage').src = images[randomIndex];
+      const timestamp = new Date().getTime();
+      const url = https://picsum.photos/600/400?random=${timestamp};
+      document.getElementById('randomImage').src = url;
     }
 
     // Mostrar una al cargar
@@ -99,4 +51,3 @@
   </script>
 </body>
 </html>
-actualisado
